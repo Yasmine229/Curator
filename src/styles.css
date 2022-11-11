@@ -1,0 +1,87 @@
+body{
+      font-family: 'Montserrat', sans-serif;
+     background-image: url(assets/images/nphrgz8yfnjylrwfr0yl.webp);
+      color: #fff;
+      margin: 0%;
+      padding: 0%;
+}
+.projectName{
+      font-size: 25px;
+}
+
+
+.navbar{
+      background-color: #222b4541;
+}
+a{
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+}
+a:hover{
+      font-size: 18px;
+      color:#dc3545;
+      text-decoration: none; 
+}
+
+.register{
+      background-color: #222b4568;
+      border: 0.0625rem solid #101426;
+      border-radius: .25rem;
+      box-shadow: none;
+}
+
+.box{
+      background-color: #222b45;
+      border: 0.0625rem solid #101426;
+      border-radius: 50px;
+      box-shadow: none;
+}
+.col-lg-3 {
+      max-width: none;
+}
+
+
+.table{
+      background-color: #222b4568;
+      color: #fff;
+}
+.search-label {
+      display: block;
+}
+.search-input {
+      margin-bottom: 1rem;
+}
+.card{
+      background-color: #222b4568;
+}
+
+.tabs{
+      background-color: #222b4568;
+      border: 0.0625rem solid #101426;
+      border-radius: 20px;
+      box-shadow: none;
+}
+.table tr td{
+      font-size: 14px;
+}
+i{
+    font-size: 60px;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+p{
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#search{
+      background-color: #f7f9fc68;
+      border: 0.0625rem solid #10142688;
+      border-radius: 15px;
+      box-shadow: none;
+}
+
+
+      

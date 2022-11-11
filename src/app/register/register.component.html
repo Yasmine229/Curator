@@ -1,0 +1,45 @@
+<div class="container register w-50 my-5 py-4">
+      <form>
+            <div class="form-group">
+            <label for="name">Name</label>
+            <input formControlName="name" class="form-control" type="text" id="name">
+            <div *ngIf="registerForm.get('name')?.errors !=null && registerForm.get('name')?.touched" class="alert my-2 alert-danger">
+             <!-- <p *ngIf="registerForm.get('name')?.errors?.required">name is required</p>
+                  <p *ngIf="registerForm.get('name')?.errors?. minlength">name is minLength 10</p>
+                  <p *ngIf="registerForm.get('name')?.errors?. maxlength">name is maxLength 20</p>-->
+                 <p >name is required</p>
+                  <p>name is minLength 10</p>
+                  <p >name is maxLength 20</p>
+            </div>
+      </div>
+     
+      <div class="form-group">
+            <label for="email">Email :</label>
+            <input formControlName="email" class="form-control" type="email" id="email">
+            <div *ngIf="registerForm.get('email')?.errors !=null && registerForm.get('email')?.touched" class="alert my-2 alert-danger">
+                  <p>email is required</p>
+                  <p>email is invalid</p>
+            </div>
+      </div>
+
+      <div class="form-group">
+            <label for="pass">Password :</label>
+            <input formControlName="password" class="form-control" type="password" id="pass">
+            <div *ngIf="registerForm.get('password')?.errors !=null && registerForm.get('password')?.touched" class="alert my-2 alert-danger">
+                  <p>password is required</p>
+                  <p>password is minLength 3</p>
+            </div>
+      </div>
+
+      <div class="form-group">
+            <label for="conpass">Password Confirm :</label>
+            <input formControlName="passwordComfirm" class="form-control" type="password" id="conpass">
+            <div *ngIf="registerForm.get('passwordComfirm')?.errors !=null && registerForm.get('passwordComfirm')?.touched" class="alert my-2 alert-danger">
+                  <p>password is not same </p>
+            </div>
+      </div>
+
+      <button [disabled]='registerForm.invalid' class="btn btn-danger" type="submit">Register</button>
+
+      </form>
+</div>

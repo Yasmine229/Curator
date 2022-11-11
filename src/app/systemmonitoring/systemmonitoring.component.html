@@ -1,0 +1,76 @@
+
+<div class="header">
+<h2 class="font-weight-bold mx-5 my-4"> System Monitoring</h2>
+</div>
+
+<div class="container my-4">
+  <div class="row justify-content-md-center">
+    <div class="row box mx-5">
+      <div class="col-lg-4 "><i class="fa-brands fa-windows text-info" ></i></div>
+      <div class="col-lg-4 py-2">
+        <h4 class="font-weight-bold ">Windows</h4>
+        <p class="font-weight-bold">5</p>
+    </div>
+    </div>
+
+    <div class="row box mx-5">
+      <div class="col-lg-4"><i class="fa-brands fa-linux text-warning "></i></div>
+      <div class="col-lg-4 py-2">
+        <h4 class="font-weight-bold ">Linux</h4>
+        <p class="font-weight-bold ">0</p>
+    </div>
+    </div>
+    <div class="row box mx-5">
+        <div class="col-lg-4 "><i class="fa-brands fa-apple text-success "></i></div>
+        <div class="col-lg-4 py-2">
+          <h4 class="font-weight-bold ">Mac</h4>
+          <p class="font-weight-bold ">0</p>
+      </div>
+      </div>
+  </div>
+</div>
+    <!--[end of boxs]-->
+    <div class=" row mx-4">
+      <div class="tabs col-md-12 my-4">
+      <div class="card m-4 ">
+        <div class="card-header row mx-3">
+          <div class="col-md-8">
+          <h4 class="font-weight-bold ">Host</h4>
+        </div>
+        <div class="col-md-4 d-flex justify-content-end">
+          <label class="search-label font-weight-bold " for="search">Search:</label>
+          <input  id="search" class="search-input" [(ngModel)]="searchText3" autocomplete="on" placeholder=" SEARCH " >
+          </div>
+        </div>
+
+        <div class="card-body" >
+              <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Host Name</th>
+                    <th scope="col">CPU Types</th>
+                    <th scope="col">RAM</th>
+                    <th scope="col">UP Time</th>
+                    <th scope="col">OS Types</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let hostsStatus of trendinghosts | filter:searchText3 ">
+                    <td class="data"><a [routerLink]='["/hosts" , hostsStatus._id]' >{{hostsStatus.hostName}}</a></td>
+                    <td>{{hostsStatus.cpu_info.model}}</td>
+                    <td>{{hostsStatus.memory}}</td>
+                    <td>Days: {{hostsStatus.uptime.days}} <br> hours: {{hostsStatus.uptime.hours}} <br> minutes: {{hostsStatus.uptime.minutes}}
+                    </td>
+                    <td>{{hostsStatus.os_info.name}}</td>
+                  </tr>
+                </tbody>
+              </table>
+                  
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+    

@@ -1,0 +1,17 @@
+p{
+      font-size: 20px;
+
+}
+p:hover{
+      font-size: 18px;
+      color:#222b4541;
+      text-decoration: none; 
+}
+.my-custom-scrollbar {
+      position: relative;
+      height: 500px;
+      overflow: auto;
+}
+.table-wrapper-scroll-y {
+     display: block;
+}

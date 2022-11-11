@@ -1,0 +1,102 @@
+<div class="header">
+      <h2 class="font-weight-bold mx-5 my-4 "> Security Events</h2>
+      </div>
+      <div class="container my-4 ">
+        <div class="row d-flex justify-content-center ">
+          <div class="col-md-2 box mx-4 bg-danger ">
+            <div class="text-center  m-3">
+          <h5 class="font-weight-bold">Total Events</h5>
+          <br>
+          <h6 class="font-weight-bold ">{{x+y+z}}</h6>
+        </div>
+          </div>
+          <div class="col-md-2 box mx-4 bg-info">
+            <div class="text-center m-3">
+          <h5 class="font-weight-bold">Application</h5>
+          <br>
+          <h6 class="font-weight-bold ">{{x}}</h6>
+        </div>
+          </div>  <div class="col-md-2 box mx-4 bg-success ">
+            <div class="text-center m-3">
+          <h5 class="font-weight-bold">System</h5>
+          <br>
+          <h6 class="font-weight-bold ">{{z}}</h6>
+        </div>
+          </div>  <div class="col-md-2 box mx-4 bg-warning ">
+            <div class="text-center m-3">
+          <h5 class="font-weight-bold">Security</h5>
+          <br>
+          <h6 class="font-weight-bold ">{{y}}</h6>
+        </div>
+          </div>
+
+      
+    </div>
+  </div>
+
+
+          <div class=" row mx-4">
+            <div class="tabs col-md-12 my-4">
+            <div class="card m-4 ">
+              <div class="card-header row mx-3">
+                <div class="col-md-8">
+                <h4 class="font-weight-bold ">Windows Events</h4>
+              </div>
+              <div class="col-md-4 d-flex justify-content-end">
+                <label class="search-label font-weight-bold " for="search">Search:</label>
+                <input  id="search" class="search-input" [(ngModel)]="searchText4" autocomplete="on" placeholder=" SEARCH ">
+                </div>
+              </div>
+      
+              <div class="card-body ">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                  <table class="table table-bordered table-striped mb-0 table-dark ">
+                      <thead>
+                        <tr >
+                          <th scope="col">Machine Name</th>
+                          <th scope="col">Id</th>
+                          <th scope="col">Level</th>
+                          <th scope="col">Process Id</th>
+                          <th scope="col">Log Name</th>
+                          <th scope="col">Time Created</th>
+                          <th scope="col">Message</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let data of trendingapplication | filter:searchText4 ">
+                          <td>{{data.machineName}}</td>
+                          <td>{{data.id}}</td>
+                          <td>{{data.level}}</td>
+                          <td>{{data.processId}}</td>
+                          <td>{{data.logName}}</td>
+                          <td>{{data.TimeCreated}}</td>
+                          <td>{{data.message}}</td>
+
+                          
+                        </tr>
+                        <tr *ngFor="let data of trendingsystem">
+                          
+                          <td>{{data.machineName}}</td>
+                          <td>{{data.id}}</td>
+                          <td>{{data.level}}</td>
+                          <td>{{data.processId}}</td>
+                          <td>{{data.logName}}</td>
+                          <td>{{data.TimeCreated}}</td>
+                          <td>{{data.message}}</td>
+                        </tr>
+                        <tr *ngFor="let data of trendingsecurity">
+                          <td>{{data.machineName}}</td>
+                          <td>{{data.id}}</td>
+                          <td>{{data.level}}</td>
+                          <td>{{data.processId}}</td>
+                          <td>{{data.logName}}</td>
+                          <td>{{data.TimeCreated}}</td>
+                          <td>{{data.message}}</td>
+                        </tr>
+                      </tbody>
+                    </table>   
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>

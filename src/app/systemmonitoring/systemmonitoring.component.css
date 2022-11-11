@@ -1,0 +1,15 @@
+p:hover{
+      font-size: 18px;
+      color: #dc3545;
+      text-decoration:none; 
+}
+
+i{
+      font-size: 50px;
+      color: #fff;
+}
+i:hover{
+      font-size:51px;
+      text-decoration: none; 
+      color: #151a30;
+}
